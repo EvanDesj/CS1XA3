@@ -1,4 +1,5 @@
 Chicken
-Cow
+Crocodile
 Pig
 Sheep
+Parrot
