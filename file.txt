@@ -1,4 +1,6 @@
 Chicken
 Crocodile
+Bear
 Cow
+Parrot
 Pig
