@@ -1,6 +1,3 @@
 Chicken
-Crocodile
-Bear
-Cow
-Parrot
-Pig
+Alligator
+Bird
