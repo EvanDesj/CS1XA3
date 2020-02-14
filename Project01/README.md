@@ -32,7 +32,7 @@ after executing the initial script.
     Run #FIXME Check?
     1
 
-**Reference:** 
+**Reference:**  
 [Ignoring null byte input](https://askubuntu.com/questions/926626/how-do-i-fix-warning-command-substitution-ignored-null-byte-in-input)  
 [Last line out of shell output](https://stackoverflow.com/questions/31381373/get-last-line-of-shell-output-as-a-variable)
 
@@ -47,7 +47,7 @@ after executing the initial script.
     Run File Size Check?
     1
 
-**Reference:** 
+**Reference:**  
 [Getting file size](https://unix.stackexchange.com/questions/22432/getting-size-with-du-of-files-only)
 
 ## File Type Count
