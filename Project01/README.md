@@ -1,13 +1,14 @@
 # CS1XA3 Project01 -  desjarde
 
 ## Usage
-To get started on executing the script, you must clone the repository to your machine, using:
+To get started on executing the script, you must clone the repository to your machine in the
+desired location, using:
 
     git clone "https://github.com/EvanDesj/CS1XA3.git"
-Once you have access to the repository, use the "cd Project01" command to access the Project01
-folder, which stores the current file, project_analyze.sh
+Once you have access to the repository, use the "cd CS1XA3/Project01" command to access the Project01
+folder, which stores the current bash file to run the project, "project_analyze.sh".
 
-To run the file, simply type:
+To run the file, which should be run from inside of the Project01 folder, simply type:
 
     ./project_analyze.sh
 and click enter.
