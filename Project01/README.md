@@ -15,7 +15,6 @@ To run the file, which should be run from inside of the Project01 folder, simply
 ```
 ./project_analyze.sh
 ```
->>>>>>> project01
 
 and click enter.
 
@@ -59,15 +58,12 @@ Choosing any other input besides 0 or 1 for each of the features outputs a messa
 
 **Reference:**  
 [Getting file size](https://unix.stackexchange.com/questions/22432/getting-size-with-du-of-files-only)
-<<<<<<< HEAD
-=======
 
 ## Checkout Latest Merge
 
 **Description:** This feature finds the most recent git commit message with the word "merge" in it and checks out that commit, putting the user into a detached head state.
 
 **Execution:** To perform this feature, enter 1 when prompted by the "Run Checkout Latest Merge?" after executing the initial script. This will fail if all current work has not been committed or stashed to git already.
->>>>>>> project01
 
 ## File Type Count
 
