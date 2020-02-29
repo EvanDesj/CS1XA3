@@ -218,7 +218,6 @@ else
 fi
 
 #Currency Exchange Special Feature
-#https://stackoverflow.com/questions/31178176/what-is-the-functionality-of-and-in-bash
 #https://www.w3schools.com/python/python_json.asp
 #https://www.twilio.com/blog/2016/12/http-requests-in-python-3.html
 #https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
@@ -260,7 +259,7 @@ elif [ "$EXCHANGE" == 1 ] ; then
 				CTYPE=$(echo "$line" | cut -c 1-3)
 				if [ "$CTYPE" == "$FCURRENCY" ] ; then
 					RATE=$(echo "$line" | cut -c 5-15)
-					ANS=`echo "scale=2; $CADAMOUNT*$RATE" | bc -l`
+					ANS=$(echo "result=$CADAMOUNT*$RATE;scale=2;result/1" | bc -l)
 					echo "You will receive $ANS $FCURRENCY for $CADAMOUNT CAD"
 				fi
 			done
@@ -289,7 +288,7 @@ elif [ "$EXCHANGE" == 1 ] ; then
 			FCTYPE=$(echo "$line" | cut -c 1-3)
 			if [ "$FCTYPE" == "$FEXCHANGE" ] ; then
 				RATE=$(echo "$line" | cut -c 5-15)
-				ANS=$(echo "scale=2; $FAMOUNT/$RATE" | bc -l)
+				ANS=$(echo "result=$FAMOUNT/$RATE;scale=2;result/1" | bc -l)
 				echo "You will recieve $ANS in CAD from $FAMOUNT in $FEXCHANGE"
 			fi
 		done
