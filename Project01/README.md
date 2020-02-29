@@ -2,7 +2,7 @@
 
 ## Usage
 
-To get started on executing the script, you must clone the repository to your machine in the desired location, using:
+To access the script, you must begin by cloning the repository to your machine in the desired location, using:
 
 ```
 git clone "https://github.com/EvanDesj/CS1XA3.git"
