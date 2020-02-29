@@ -31,7 +31,7 @@ Once the program has started running, the user will be asked to respond 0 (don't
 
 Choosing any other input besides 0 or 1 for each of the features outputs a message saying the input was not valid.
 
-## Folder Lock Down
+## Custom Feature Folder Lock Down
 
 **Description:** This feature scrambles the names of all the files and directories, besides files needed by the script, that are in the current directory of the project_analyze.sh file. The Folder Lock Down feature can only be run by itself, meaning that if you choose to encrypt, no other features can be run until the files have been decrypted again. This function will not encrypt files with names that have a period in them besides from the extension separator. The feature still executes on the remaining files that do work, but an error is shown if that type of file exists. Once files are encrypted, then the next time the script is run the user is forced to decrypt the files before the other features become available again.
 
@@ -86,7 +86,7 @@ Choosing any other input besides 0 or 1 for each of the features outputs a messa
 **Reference:**  
 [Getting the basename of a file](https://www.cyberciti.biz/faq/bash-get-basename-of-filename-or-directory-name/)
 
-## Currency Exchange
+## Custom Feature Currency Exchange
 
 **Description:** This feature uses an API to get current exchange rates with a base of Canadian Dollars. The user then has the ability to exchange between Canadian Dollars and a foreign currency, which must be within the data set that is being used to exchange, or between foreign currency and Canadian Dollars, where once again, the foreign currency must be in the known exchanges. Each exchange rate is inputted using the three letter code associated with that currency. To see a full list of possible currency exchanges, check the list here: [Currencies](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) If any expected number amount, whether foreign or Canadian Dollar, is not a number, then the exchange simply returns 0. If both inputs are valid, then the exchange is calculated and outputted to the user, rounded to 2 decimal places.
 
