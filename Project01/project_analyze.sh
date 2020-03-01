@@ -60,8 +60,9 @@ elif [ "$LOCKDOWN" == 1 ] ; then
         fi
 	find . -maxdepth 1 -print0 | while IFS= read -d '' file ; do
                 NAME=$(basename "$file")
-                if [ "$NAME" != "project_analyze.sh" ] && [ "$NAME" != ".encdec.py" ] && [ "$NAME" != "." ] && [ "$NAME" != ".." ] && [ "$NAME" != ".enc" ] && [ "$NAME" != ".*" ] ; then
-                        NEWNAME=$(printf "$NAME","$KEY","$MODE" | python3 ".encdec.py" | tr -d "\0")
+                if [ "$NAME" != "project_analyze.sh" ] && [[ "$NAME" =~ ^[^.] ]] ; then
+                        echo "$NAME"
+			NEWNAME=$(printf "$NAME","$KEY","$MODE" | python3 ".encdec.py" | tr -d "\0")
                         mv "$NAME" "$NEWNAME"
                         if [ "$MODE" = "decrypt" ] ; then
                                 if [ -d "$NEWNAME" ] ; then
