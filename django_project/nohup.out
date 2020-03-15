@@ -1,0 +1,15 @@
+Watching for file changes with StatReloader
+[10/Mar/2020 15:02:26] "GET /e/desjarde/hello/goodbye/ HTTP/1.1" 200 43
+[10/Mar/2020 15:02:26] "GET /e/desjarde/hello/goodbye/ HTTP/1.1" 200 43
+[10/Mar/2020 15:02:27] "GET /e/desjarde/hello/goodbye/ HTTP/1.1" 200 43
+[10/Mar/2020 15:02:27] "GET /e/desjarde/hello/goodbye/ HTTP/1.1" 200 43
+[10/Mar/2020 15:02:28] "GET /e/desjarde/hello/goodbye/ HTTP/1.1" 200 43
+[10/Mar/2020 15:02:41] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:02:44] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:02:44] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:02:44] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:02:44] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:03:25] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:03:26] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:06:46] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
+[10/Mar/2020 15:06:46] "GET /e/desjarde/hello/ HTTP/1.1" 200 41
