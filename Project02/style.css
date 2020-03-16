@@ -11,7 +11,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 display:block;
 }
 
-html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;}
+html, body {background-color: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px;}
 
 .clear {clear: both;}
 
@@ -19,33 +19,41 @@ p {
 	font-size: 1em;
 	line-height: 1.4em;
 	margin-bottom: 20px;
-	color: #444;
+	color: #404040;
 }
 
 #cv {
 	width: 90%;
 	max-width: 800px;
-	background: #f3f3f3;
+	background-color: #f3f3f3;
 	margin: 30px auto;
 }
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #BAD000;
-	background: #ededed;
+	background-color: #d5d5d5;
 }
 
 #name h1 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 	font-weight: 700;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	margin-bottom: -6px;
 }
 
 #name h2 {
-	font-size: 2em;
+	font-size: 1.8em;
 	margin-left: 2px;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+}
+
+#lightdarkimg {
+	width: 7%;
+	float: right;
+	cursor: pointer;
+	padding: 2px;
+	border: 2px solid black;
+	background: #ededed
 }
 
 #mainArea {
@@ -81,26 +89,52 @@ p {
 
 #contactDetails ul li {
 	margin-bottom: 3px;
-	color: #444;
 }
 
 #contactDetails ul li a, a[href^=tel] {
-	color: #444;
+
 	text-decoration: none;
-	-webkit-transition: all .3s ease-in;
-	-moz-transition: all .3s ease-in;
-	-o-transition: all .3s ease-in;
-	-ms-transition: all .3s ease-in;
-	transition: all .3s ease-in;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-ms-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+
 }
 
-#contactDetails ul li a:hover {
-	color: #cf8a05;
+.arrow {
+	width: 7%;
+	cursor: pointer;
+	margin-left: 5px;
+	transform: rotate(90deg);
 }
 
+.link {
+	color: #404040;
+}
+
+#contactDetails .link:hover {
+	font-style: italic;
+}
+
+#mainArea .link:hover {
+	font-weight: bold;
+}
+
+.link .contactLink:hover {
+	font-style: italic;
+}
+
+.bottomPadList {
+	padding-bottom: 20px;
+}
+
+#mainArea h1 {
+	color: #009300
+}
 
 section {
-	border-top: 1px solid #dedede;
+	border-top: 2px solid #dddddd;
 	padding: 20px 0 0;
 }
 
@@ -112,9 +146,34 @@ section:last-child {
 	padding: 20px 0 10px;
 }
 
+#profileTitle {
+	cursor:pointer;
+}
+
+#workTitle {
+        cursor:pointer;
+}
+
+#skillsTitle {
+        cursor:pointer;
+}
+
+#eduTitle {
+        cursor:pointer;
+}
+
+#volunTitle {
+        cursor:pointer;
+}
+
+#credTitle {
+        cursor:pointer;
+}
+
 .sectionTitle {
 	float: left;
 	width: 25%;
+	margin-bottom: 15px;
 }
 
 .sectionContent {
@@ -126,10 +185,10 @@ section:last-child {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 1.5em;
-	color: #cf8a05;
 }
 
 .sectionContent h2 {
+	display: inline;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
 	margin-bottom: 20px;
@@ -142,13 +201,12 @@ section:last-child {
 }
 
 .keySkills {
-	list-style-type: none;
-	-moz-column-count:3;
-	-webkit-column-count:3;
-	column-count:3;
+	-moz-column-count:2;
+	-webkit-column-count:2;
+	column-count:2;
 	margin-bottom: 20px;
 	font-size: 1em;
-	color: #444;
+	color: #000000;
 }
 
 .keySkills ul li {
@@ -158,12 +216,6 @@ section:last-child {
 @media all and (min-width: 602px) and (max-width: 800px) {
 	#headshot {
 		display: none;
-	}
-
-	.keySkills {
-	-moz-column-count:2;
-	-webkit-column-count:2;
-	column-count:2;
 	}
 }
 
@@ -193,12 +245,6 @@ section:last-child {
 		margin-left: -2px;
 		font-size: 1.25em;
 	}
-
-	.keySkills {
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2;
-	}
 }
 
 @media all and (max-width: 480px) {
@@ -213,7 +259,6 @@ section:last-child {
 	#mainArea {
 		padding: 0 25px;
 	}
-
 
 	.keySkills {
 	-moz-column-count:1;

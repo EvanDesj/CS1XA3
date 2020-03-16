@@ -1,6 +1,3 @@
-<!--http://www.thomashardy.me.uk/free-responsive-html-css3-cv-template-->
-<!-- https://www.flaticon.com/ -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +10,15 @@
 <link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="resume.js"></script>
 </head>
 <body id="top">
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="evan.jpeg" alt="Profile Picture"/>
+			<img src="images/evan.jpg" alt="Profile Picture"/>
 		</div>
 
 		<div id="name">
@@ -28,41 +28,42 @@
 
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li>Email: <a href="mailto:evan.desjardine@gmail.com" target="_blank">evan.desjardine@gmail.com</a></li>
-				<li>LinkedIn: <a href="https://www.linkedin.com/in/evan-desjardine/" target="_blank">Evan Desjardine</a></li>
+				<li>Email: <a class="link contact" href="mailto:evan.desjardine@gmail.com" target="_blank">evan.desjardine@gmail.com</a></li>
+				<li>LinkedIn: <a class="link contact" href="https://www.linkedin.com/in/evan-desjardine/" target="_blank">Evan Desjardine</a></li>
 				<li>Cell: 519-476-4192</li>
 			</ul>
 		</div>
+
+		<img id="lightdarkimg" class="light quickFade delayFour" src="images/dark.png" alt="D/L Mode Selector"/>
 		<div class="clear"></div>
 	</div>
 
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
-				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
+				<div id="profileTitle" class="sectionTitle">
+					<h1>Personal<br />Profile<img id="profileArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
 				</div>
 
-				<div class="sectionContent">
-					<p> I'm a computer science student at McMaster University with a strong interest in programming and web design. I am passionate about learning, and am looking for opportunities where I will be challenged, as I know that challenges lead to growth, and in order to be successful I must constantly be growing.</p>
-					<p> Currently, I am working towards becoming more fluent in HTML, CSS and Javascript, through online resources such as w3schools, complemented by in-class learning, where we are developing all the skills needed to create a personal website. </p>
-					<p> Outside of computer science, I enjoy playing volleyball and volunteering with my church, as this allows me to use my gifts and abilities to serve others. These service projects have contributed significantly to my own interpersonal skills, as well as expanding my ability to lead and work effectively in a team. </p>
+				<div id="profileText" class="sectionContent">
+					<p>I'm a computer science student at McMaster University with a strong interest in programming and web design. I am passionate about learning, and am looking for opportunities where I will be challenged, as I know that challenges lead to growth, and in order to be successful I must constantly be growing.</p>
+					<p>Currently, I am working towards becoming more fluent in HTML, CSS and Javascript, through online resources such as w3schools, complemented by in-class learning, where we are developing all the skills needed to create a personal website.</p>
+					<p>Outside of computer science, I enjoy playing volleyball and volunteering with my church, as this allows me to use my gifts and abilities to serve others. These service projects have contributed significantly to my own interpersonal skills, as well as expanding my ability to lead and work effectively in a team. </p>
 				</div>
 			</article>
 			<div class="clear"></div>
 		</section>
 
-
 		<section>
-			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+			<div id="workTitle" class="sectionTitle">
+				<h1>Work<br />Experience<img id="workArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
 			</div>
 
-			<div class="sectionContent">
+			<div id="workText" class="sectionContent">
 				<article>
 					<h2>Dale's Antique Market, Grand Bend, ON - General Labourer</h2>
 					<p class="subDetails">April 2018 - August 2019</p>
-					<ul>
+					<ul class="bottomPadList">
 						<li> Worked independently with minimal supervision to increase store cleanliness and overall appeal. </li>
 						<li> Formatted and uploaded photos to the store website, as well as adding product information to better inform customers about various items. </li>
 						<li> Assisted customers and reconciled the daily receipts. </li>
@@ -73,15 +74,15 @@
 		</section>
 
 		<section>
-			<div class="sectionTitle">
-				<h1>Key Skills</h1>
+			<div id="skillsTitle" class="sectionTitle">
+				<h1>Key Skills<img id="skillsArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
 			</div>
 
-			<div class="sectionContent">
-				<ul class="keySkills">
+			<div id="skillsText" class="sectionContent">
+				<ul class="keySkills bottomPadList">
 					<li>Familiar programming in Python, Java and Haskell</li>
 					<li>Experience with C++ using Arduino</li>
-					<li>Basic understanding of shell scripting and GitHub</li>
+					<li>Basic understanding of Bash, GitHub, HTML, CSS and Javascript</li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -89,29 +90,74 @@
 
 
 		<section>
-			<div class="sectionTitle">
-				<h1>Education</h1>
+			<div id="eduTitle" class="sectionTitle">
+				<h1>Education<img id="eduArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
 			</div>
 
-			<div class="sectionContent">
+			<div id="eduText" class="sectionContent">
 				<article>
 					<h2>McMaster University, Hamilton, ON</h2>
 					<p class="subDetails">Candidate for Bachelor of Applied Science, Major in Computer Science; Anticipated graduation in 2023</p>
-					<p>Relevant Course: Introduction to Computational Thinking, Engineering Mathematics I</p>
+					<ul class="bottomPadList">
+						<li>Relevant Course: Introduction to Computational Thinking, Engineering Mathematics I</li>
+					<ul>
 				</article>
 			</div>
 			<div class="clear"></div>
 		</section>
 
 		<section>
-			<div class = "sectionTitle">
-				<h1>Credits</h1>
+			<div id="volunTitle" class="sectionTitle">
+				<h1>Volunteer Experience<img id="volunArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
 			</div>
 
-			<div class="sectionContent">
+			<div id="volunText" class="sectionContent">
 				<article>
-					<p>Icons made by Google from <a href="https://www.flaticon.com"; target = "_blank">www.flaticon.com</p>
-					<p>The html document used the HTML template from <a href="http://www.thomashardy.me.uk/free-responsive-html-css3-cv-template"; target = "_blank">here</p>
+					<h2>Audio Visual Technician</h2>
+					<p class="subDetails"><a class="link" href="https://www.grandbendchurchofgod.org/" target="_blank">Grand Bend Church of God, Grand Bend, ON</a></p>
+					<p class="subDetails">June 2015 - August 2019</p>
+					<ul class="bottomPadList">
+						<li>Operated a soundboard, used Audacity, uploaded recordings to the organization's website and occasionally made PowerPoint Presentations.</li>
+					</ul>
+					<br />
+				</article>
+
+				<article>
+					<h2>Camp Leader</h2>
+					<p class="subDetails"><a class="link" href="https://www.myebc.ca/" target="_blank">Emmanuel Baptist Church, Exeter, ON</a></p>
+					<p class="subDetails">One week in July 2018 and 2019</p>
+					<ul class="bottomPadList">
+						<li>Worked with a team of about 20 youth and adults to plan and provide a summer day camp to around 100 kids from grades 5-7.</li>
+						<li>Was responsible for 5-6 youth on daily outings and helped to organize and lead games.</li>
+					</ul>
+					<br />
+				</article>
+
+				<article>
+					<h2>Colombia Missions Trip Team Member</h2>
+					<p class="subDetails"><a class="link" href="https://www.myebc.ca/" target="_blank">Emmanuel Baptist Church, Exeter, ON</a></p>
+					<p class="subDetails">March Break 2019</p>
+					<ul class="bottomPadList">
+						<li>Travelled to Colombia with a team of 10 youth and five adults from March 7-18, 2019.</li>
+						<li>Assisted in providing food and clothing for around 70 Venezuelan refugees.</li>
+						<li>Visited a girls' orphanage and played games, led children songs and helped raise funds to build another orphanage to better accommodate all the girls.</li>
+						<li>Our team combined with another group from Colombia to organize a youth retreat for about 50 kids.</li>
+					</ul>
+					<br />
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div id="credTitle" class="sectionTitle">
+				<h1>Credits<img id="credArrow" class="arrow" src="images/arrow.png" alt="arrow"/></h1>
+			</div>
+
+			<div id="credText" class="sectionContent">
+				<article>
+					<p>Icons made by Google and Pixel Perfect from <a class="link" href="https://www.flaticon.com"; target = "_blank">www.flaticon.com</a><br>
+					   This html document used this <a class="link" href="http://www.thomashardy.me.uk/free-responsive-html-css3-cv-template"; target = "_blank">HTML template</a></p>
 				</article>
 			</div>
 			<div class="clear"></div>
@@ -119,7 +165,7 @@
 
 	</div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
@@ -127,6 +173,6 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 var pageTracker = _gat._getTracker("UA-3753241-1");
 pageTracker._initData();
 pageTracker._trackPageview();
-</script>
+</script> -->
 </body>
 </html>
