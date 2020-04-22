@@ -8,8 +8,12 @@
             <div class="w3-card w3-round w3-white">
                 <div class="w3-container w3-padding">
                     <h6 class="w3-opacity">Change Password</h6>
-                    <!--                     TODO Objective 3: Add Password Change Form -->
-                </div>
+                    <form method="post" id="change_form" action="{% url 'social:account_view' %}">
+      			{% csrf_token %}
+     		    	{{ change_form }}
+			<input type="submit" value="Submit" />
+  		    </form>
+		</div>
             </div>
         </div>
     </div>

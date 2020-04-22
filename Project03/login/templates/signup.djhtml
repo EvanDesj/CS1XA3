@@ -3,5 +3,12 @@
 {% block title %}Signup Page{% endblock %}
 
 {% block middle_column %}
-    <!-- TODO Objective 1: implement signup form -->
+    <form method="post" id="create_form" action="{% url 'login:create_view' %}">
+      {% csrf_token %}
+      {{ create_form }}
+      <input type="submit" value="Submit" />
+  </form>
+  {% if create_failed %}
+      <p style="color:red">Unable to create username or password</p>
+  {% endif %}
 {% endblock %}

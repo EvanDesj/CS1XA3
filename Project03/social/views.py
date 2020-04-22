@@ -47,17 +47,24 @@ def account_view(request):
                         (if handled in this view)
     """
     if request.user.is_authenticated:
-        form = None
+        user_info = models.UserInfo.objects.get(user=request.user)
+        if request.method == 'POST':
+            form = PasswordChangeForm(request.user, request.POST)
+            if form.is_valid():
+                user = models.UserInfo.objects.update 
+                update_session_auth_hash(request, user_info) 
+                return redirect('social:messages_view')
+        else:
+            form = PasswordChangeForm(request.user)
 
         # TODO Objective 3: Create Forms and Handle POST to Update UserInfo / Password
 
-        user_info = models.UserInfo.objects.get(user=request.user)
         context = { 'user_info' : user_info,
-                    'form' : form }
+                    'change_form' : form }
         return render(request,'account.djhtml',context)
-
-    request.session['failed'] = True
-    return redirect('login:login_view')
+    else:
+        request.session['failed'] = True
+        return redirect('login:login_view')
 
 def people_view(request):
     """Private Page Only an Authorized User Can View, renders people page
