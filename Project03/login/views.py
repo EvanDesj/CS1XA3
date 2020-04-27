@@ -44,9 +44,11 @@ def logout_view(request):
     -------
       out: (HttpResponse) - perform User logout and redirects to login_view
     """
-    # TODO Objective 4 and 9: reset sessions variables
+    # O4 DONE Objective 4 and 9: reset sessions variables
 
     # logout user
+    request.session['show_people'] = 0
+    request.session['post_amount'] = 0
     logout(request)
 
     return redirect('login:login_view')

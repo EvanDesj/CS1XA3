@@ -57,9 +57,26 @@ function submitMorePpl(event) {
    ********************************************************************************************
    */
 
+function adResponse(data,status) {
+    if (status == 'success') {
+        // reload page to update like count
+        location.reload();
+    }
+    else {
+        alert('failed to accept or decline request ' + status);
+    }
+}
+
 function acceptDeclineRequest(event) {
-    // TODO Objective 6: perform AJAX POST to accept or decline Friend Request
-    alert('Accept/Decline Button Pressed');
+	// TODO Objective 6: perform AJAX POST to accept or decline Friend Request
+	    let decision = event.target.id;
+	    let json_data = { 'decision' : decision };
+	    let url_path = accept_decline_url;
+
+	    // AJAX post
+	    $.post(url_path,
+	           json_data,
+	           adResponse);
 }
 
 /* ********************************************************************************************

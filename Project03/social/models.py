@@ -29,6 +29,7 @@ class Post(models.Model):
     timestamp = models.DateTimeField(auto_now=True)
     likes = models.ManyToManyField(UserInfo,
                                    related_name='likes')
+    liked = models.BooleanField(default=False)
 
 class FriendRequest(models.Model):
     to_user = models.ForeignKey(UserInfo,
